@@ -1,3 +1,41 @@
+const cats = ["Milo", "Otis", "Garfield"];
+
+function destructivelyAppendCat(name) {
+  cats.push(name); 
+}
+
+
+function destructivelyPrependCat(name) {
+    cats.unshift(name); // Adds 'name' to the beginning of the array
+}
+
+function destructivelyRemoveFirstCat() {
+  cats.shift(); // Removes the first cat from the array
+}
+
+function destructivelyRemoveLastCat() {
+  cats.pop(); // Removes the last cat from the array
+}
+
+function appendCat(name) {
+  return [...cats, name]; // Returns a new array with 'name' added to the end
+}
+
+function prependCat(name) {
+  return [name, ...cats]; // Returns a new array with 'name' added to the beginning
+}
+
+function removeLastCat() {
+  return cats.slice(0, -1); // Returns a new array without the last cat
+}
+
+function removeFirstCat() {
+  return cats.slice(1); // Returns a new array without the first cat
+}
+function removeFirstCat() {
+  return cats.slice(1); // Returns a new array without the first cat
+}
+
 require ( './helpers.js' );
 
 describe('index.js', function () {
